@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Js Grade Sheet</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+
+</head> 
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+                <form class="border mx-auto bg-light shadow w-75 m-5 p-3">
+					<h3 class="p-2 font-weight-bold my-2"><i class="fas fa-book-open text-dark"></i> &nbsp; &nbsp;Grade Sheet</h3>
+                    <div class="table-responsive-md">
+                        <table class="table table-borderless table-hover font-weight-bold">
+                            <thead class="thead-dark ">
+                                <tr>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col" class="w-25">Score</th>
+                                    <th scope="col" class="w-25 text-center">Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>English</td>
+                                    <td >
+                                        <input type="number" id="score"class="form-control scoreSum" placeholder="enter score" onchange="Grade(this.value, 'grade', 'score');" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <p class="mt-2 mb-0 text-center" id="grade"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maths</td>
+                                    <td>
+                                        <input type="number" id="score1" class="form-control scoreSum" placeholder="enter score" onchange="Grade(this.value, 'grade1', 'score1');" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <p class="mt-2 mb-0 text-center" id="grade1"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Chemistry</td>
+                                    <td>
+                                        <input type="number" id="score2" class="form-control scoreSum" placeholder="enter score" onchange="Grade(this.value, 'grade2', 'score2');" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <p class="mt-2 mb-0 text-center" id="grade2"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Biology</td>
+                                    <td>
+                                        <input type="number" id="score3" class="form-control scoreSum" placeholder="enter score" onchange="Grade(this.value, 'grade3', 'score3');" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <p class="mt-2 mb-0 text-center" id="grade3"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>French</td>
+                                    <td>
+                                        <input type="number" id="score4" class="form-control scoreSum" placeholder="enter score" onchange="Grade(this.value, 'grade4', 'score4');" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        <p class="mt-2 mb-0 text-center" id="grade4"></p>
+                                    </td>
+                                </tr>     
+                                <tr class="border table-secondary border-dark rounded">
+                                    <td>Total</td>
+                                    <td>
+                                        <span class="mt-2 mb-0 w-25" id="displayTotal"></p>
+                                    </td>
+                                    <td></td>
+                                </tr>    
+                                <tr class="border border-dark table-secondary rounded">
+                                    <td>Average</td>
+                                    <td>
+                                        <span class="mt-2 mb-0 w-25" id="displayAverage"></p>
+                                    </td>
+                                    <td></td>
+                                </tr>    
+                                
+                                <tr class="hidden-table">
+                                    <td colspan="2">
+                                        <div class="" role="alert" id='alertMessage' ></div>
+                                    </td>
+                                    <td>
+                                        <div class="mt-2 mb-0">
+                                            <img src=""  alt="emoji" id="emoji" height="60px">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hidden-table">
+                                    <td>
+                                        <button type="button" class="btn btn-dark p-3" onclick="total();" id="Buttn">Check Result <i class="fas fa-angle-double-right"></i>                                       </button> 
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </form>
+			</div>
+		</div>
+	</div>
+
+	
+    <script src="script.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
