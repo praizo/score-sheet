@@ -75,9 +75,7 @@ function avgScore(x) {
     else if(averageGrade < 50 ) {
         document.getElementById('alertMessage').innerHTML = 'Oops! You disappointed your teacher.';
         document.getElementById('alertMessage').className = 'alert alert-danger mt-2 mb-0';
-        document.getElementById('alertMessage').role = 'alert';
         document.getElementById('emoji').style.display = 'block';
-
         document.getElementById('emoji').src = 'img/image1.gif';
     } 
 }
