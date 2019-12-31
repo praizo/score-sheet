@@ -6,6 +6,12 @@ function Grade(x,y,z) {
         document.getElementById(y).innerHTML = 'out of range';
         document.getElementById('Buttn').className = 'btn btn-danger p-3';
         document.getElementById(z).style = 'border: red 2px solid !important';
+        
+        document.getElementById('alertMessage').style.display = 'none';
+        document.getElementById('emoji').style.display = 'none';
+        document.getElementById('displayTotal').style.display = 'none';
+        document.getElementById('displayAverage').style.display = 'none';
+
     } else {
         document.getElementById('Buttn').disabled = false;
         document.getElementById('Buttn').className = 'btn btn-dark p-3';
@@ -35,6 +41,7 @@ function Grade(x,y,z) {
 
 //Function to display Total and DOM output
 function total() {
+    document.getElementById('displayTotal').style.display = 'inherit';
     scores = document.getElementsByClassName('scoreSum');
     totalScore = 0;
     for(i=0; i<scores.length; i++){
@@ -53,6 +60,8 @@ document.getElementById('emoji').style.display = 'none';
 
 //function to determine average and DOM output
 function avgScore(x) {
+    document.getElementById('displayAverage').style.display = 'inherit';
+
     var averageGrade = (x / 500) * 100;
     document.getElementById('displayAverage').innerHTML = averageGrade.toFixed(2);
     document.getElementById('alertMessage').style.display = 'block';
@@ -60,7 +69,6 @@ function avgScore(x) {
         document.getElementById('alertMessage').innerHTML = 'Bravo! You did excellent, keep it up.'; 
         document.getElementById('emoji').style.display = 'block';
         document.getElementById('alertMessage').className = 'alert alert-primary mt-2 mb-0';
-
         document.getElementById('emoji').src = 'img/image4.gif';
 
     }
